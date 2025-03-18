@@ -50,10 +50,18 @@ class AccessorArray extends MutatorArray{
         return false;
     }
 
-    flat(depth){
-        if(depth < 1)
-            depth= 1;
-        
+    flat(){
+        let arr=[];
+        for(let i=0;i<this.length;i++){
+            if(this[i].length){
+                for(let j=0;j<this[i].length;j++)
+                    arr.push(this[i][j]);
+            }
+            else{
+                arr.push(this[i]);
+            }
+        }
+        return arr;
     }
 }
 

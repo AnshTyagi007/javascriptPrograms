@@ -35,21 +35,19 @@ class MutatorArray extends MyArray{
 
     splice(start, itemsLength, ...elements){
         let arr=[];
-        for(let i=start + itemsLength;i<this.length;i++){
+        for(let i=start+ itemsLength; i< this.length;i++){
             arr.push(this[i]);
-        for(let i=start;i<this.length;i++)
+        }
+        for(let i=this.length-1;i>=start;i--){
             delete this[i];
+            this.length--;
         }
-        let i;
-        for(i=0;i<elements.length;i++){
-            this[start+i]= elements[i];
+        for(let i=0;i<elements.length;i++){
+            this.push(elements[i]);
         }
-        i++;
-        let j;
-        for(j=0;j<arr.length;j++){
-            this[i+j]= arr[j];
+        for(let i=0;i<arr.length;i++){
+            this.push(arr[i]);
         }
-        this.length= i+j;
     }
 
     sort(){

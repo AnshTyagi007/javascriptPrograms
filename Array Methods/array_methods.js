@@ -30,8 +30,9 @@ console.log(arr)
 // console.log(arr)
 
 // // splice
-// arr.splice(2, 2)
-// console.log(arr)
+// const arr_splice= new FinalArray(1, 2, 7, 8, 9, 6, 7)
+// arr_splice.splice(2, 3, 3, 4, 5)
+// console.log(arr_splice)
 
 // // sort
 // const arr_sort= new FinalArray(6,4,1,5,3,2)
@@ -64,6 +65,10 @@ console.log(arr)
 //     console.log('4 is present')
 // else
 //     console.log('4 is not present')
+
+// flat
+// const arr_flat= new FinalArray([1, 2], [3, 4], 5, [6, [7, [8, 9]]])
+// console.log(arr_flat.flat());
 
 // // forEach
 // arr.forEach((element) => {
